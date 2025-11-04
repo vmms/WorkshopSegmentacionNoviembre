@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    font-family: "Exo 2", sans-serif;
+    background: url('source/SLICER.gif') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 🔹 centra verticalmente todo dentro del header */
+    padding: 20px 40px;
+    background: rgb(27, 27, 27);
+    text-transform: uppercase;
+}
+
+/* 🔹 NAV centrado verticalmente */
+nav {
+    display: flex;
+    align-items: center; /* centra los enlaces dentro de nav */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D3D3D3;
+}
+
+nav a.active {
+    color: #D3D3D3;
+}
+
+/* 🔹 LOGO con imagen y texto en dos líneas */
+.logo {
+    display: flex;
+    align-items: center; /* centra verticalmente el logo y el texto */
+    gap: 10px; /* espacio entre imagen y texto */
+    text-align: left;
+}
+
+.logo img {
+    width: 50px;  /* ajusta según el tamaño que prefieras */
+    height: auto;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #D3D3D3;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #A9A9A9;
+    text-transform: none; /* mantiene “for Latinoamérica” en minúsculas */
+}
+
+/* 🔹 TEXTO DE UBICACIÓN */
+.location {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #D3D3D3;
+}
+
+.so-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* tres columnas iguales */
+    grid-template-rows: auto auto auto;    /* tres filas: nombre, imagen, link */
+    justify-items: center;                 /* centra horizontalmente cada celda */
+    row-gap: 10px;                         /* espacio vertical entre filas */
+    margin-top: 20px;
+}
+
+.so-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.so-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+}
+
+.so-link a {
+    text-decoration: none;
+    color: #2e3235;
+    font-weight: 500;
+}
+
+.so-link a:hover {
+    color: #181b1d;
+    text-decoration: underline;
+}
+
+section.preparacion {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    color: #2d2d2d;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+section.preparacion h1, 
+section.preparacion h2,
+section.preparacion h3 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+section.preparacion h2 {
+    border-bottom: 2px solid #545d63;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+section.preparacion h3 {
+    font-size: 1.2rem;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #545d63;
+    display: block;      /* bloque para que se respete el margin auto */
+    width: 50%;          /* ancho de la línea */
+    margin: 25px auto 15px auto; /* centra horizontalmente */
+    text-align: center;  /* centra el texto dentro del bloque */
+}
+
+section.preparacion p {
+    line-height: 1.6;
+}
+
+section.preparacion ul, section.preparacion ol {
+    margin-left: 20px;
+}
+
+section.preparacion li {
+    margin-bottom: 12px;
+}
+
+section.preparacion a {
+    color: #2e3235;
+    text-decoration: none;
+}
+
+section.preparacion a:hover {
+    color: #181b1d;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+section.preparacion img {
+    display: block;
+    max-width: 80%; /* Reduce el tamaño de las imágenes */
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #212529; /* mismo tono oscuro que la sección LATAM */
+  color: #f8f9fa;            /* texto claro */
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.95rem;
+  margin-top: 0;
+  border-top: 3px solid #000000; /* línea azul de acento */
+}
+
+/* 🔹 Texto del footer */
+footer p {
+  margin: 0;
+  color: #adb5bd; /* gris claro */
+}
+
+/* 🔹 Enlaces dentro del footer (si los agregas después) */
+footer a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}

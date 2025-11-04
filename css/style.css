@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+    font-family: "Exo 2", sans-serif;
+    background: url('source/SLICER.gif') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 🔹 centra verticalmente todo dentro del header */
+    padding: 20px 40px;
+    background: rgb(27, 27, 27);
+    text-transform: uppercase;
+}
+
+/* 🔹 NAV centrado verticalmente */
+nav {
+    display: flex;
+    align-items: center; /* centra los enlaces dentro de nav */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D3D3D3;
+}
+
+nav a.active {
+    color: #D3D3D3;
+}
+
+/* 🔹 LOGO con imagen y texto en dos líneas */
+.logo {
+    display: flex;
+    align-items: center; /* centra verticalmente el logo y el texto */
+    gap: 10px; /* espacio entre imagen y texto */
+    text-align: left;
+}
+
+.logo img {
+    width: 50px;  /* ajusta según el tamaño que prefieras */
+    height: auto;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #D3D3D3;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #A9A9A9;
+    text-transform: none; /* mantiene “for Latinoamérica” en minúsculas */
+}
+
+/* 🔹 TEXTO DE UBICACIÓN */
+.location {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #D3D3D3;
+}
+
+.pres {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 60px 0;
+    color: white;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.content {
+    flex: 1;
+    text-align: right; /* 🔹 alinea todo a la derecha */
+}
+
+.content h2 {
+    font-size: 4rem;
+    margin: 0 0 20px;
+    color: #2d2d2d;
+;
+}
+
+.event-info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: #2d2d2d;
+}
+
+.event-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #8d8d8d;
+    color: #121212;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: rgb(0, 0, 0);
+    color: #bababa;
+}
+
+.social {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.social a {
+    display: block;
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.intro {
+    background-color: #282828; /* 🔹 gris oscuro */
+    color: #ffffff;           /* 🔹 texto blanco */
+    padding: 80px 15%;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.intro h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+}
+
+
+.agenda {
+    background: rgb(56, 59, 65);
+    color: #D3D3D3;
+    padding: 40px 20px;
+    text-align: center;
+}
+.agenda h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+.agenda > p {
+    max-width: 1100px;
+    margin: 0 auto 28px auto;
+    line-height: 1.6;
+    color: #eaeaea;
+}
+.agenda-item {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 700px;
+    text-align: left;
+    gap: 16px;
+}
+.agenda-item .bar {
+    width: 5px;
+    height: 60px;
+    background: white;
+    flex-shrink: 0;
+}
+.agenda-item h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+.agenda-item h4 {
+    margin: 4px 0 6px 0;
+    font-size: 1.05rem;
+    color: #D3D3D3;
+    font-weight: 600;
+}
+.agenda-item p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: white;
+}
+
+/* Franja de cambio de espacio */
+.venue-change{
+    display:flex;align-items:center;justify-content:center;gap:12px;
+    margin:32px auto;max-width:800px;padding:14px 18px;
+    background:linear-gradient(90deg,#ffffff,#A9A9A9,#ffffff);
+    color:#000;border-radius:12px;border:1px solid #fff;
+    font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+    box-shadow:0 6px 20px rgba(0,0,0,.25)
+}
+.venue-change i{font-size:1.2rem}
+.venue-change small{display:block;font-weight:400;text-transform:none;letter-spacing:0;opacity:.85}
+
+.newsletter {
+    background: black;
+    padding: 40px 20px;
+    text-align: center;
+}
+.newsletter-container {
+    background: #A9A9A9;
+    padding: 40px;
+    display: inline-block;
+    text-align: left;
+    border-radius: 10px;
+}
+.newsletter h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+}
+.newsletter p {
+    color: black;
+    font-size: 1rem;
+}
+.newsletter input {
+    padding: 10px;
+    border: 2px solid black;
+    margin-right: 10px;
+    border-radius: 6px;
+}
+.newsletter button {
+    padding: 10px 20px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 700;
+}
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #A9A9A9;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    .content h2{font-size: 3rem;}
+    .agenda h2{font-size: 2rem;}
+    .agenda-item{max-width: 95%;}
+}
+
+footer {
+  background-color: #212529; /* mismo tono oscuro que la sección LATAM */
+  color: #f8f9fa;            /* texto claro */
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.95rem;
+  margin-top: 0;
+  border-top: 3px solid #000000; /* línea azul de acento */
+}
+
+/* 🔹 Texto del footer */
+footer p {
+  margin: 0;
+  color: #adb5bd; /* gris claro */
+}
+
+/* 🔹 Enlaces dentro del footer (si los agregas después) */
+footer a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}

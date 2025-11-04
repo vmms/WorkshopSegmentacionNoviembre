@@ -1,0 +1,229 @@
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: #dadada;
+  color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 🔹 centra verticalmente todo dentro del header */
+    padding: 20px 40px;
+    background: rgb(27, 27, 27);
+    text-transform: uppercase;
+}
+
+/* 🔹 NAV centrado verticalmente */
+nav {
+    display: flex;
+    align-items: center; /* centra los enlaces dentro de nav */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D3D3D3;
+}
+
+nav a.active {
+    color: #D3D3D3;
+}
+
+/* 🔹 LOGO con imagen y texto en dos líneas */
+.logo {
+    display: flex;
+    align-items: center; /* centra verticalmente el logo y el texto */
+    gap: 10px; /* espacio entre imagen y texto */
+    text-align: left;
+}
+
+.logo img {
+    width: 50px;  /* ajusta según el tamaño que prefieras */
+    height: auto;
+}
+
+.logo-text h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #D3D3D3;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #A9A9A9;
+    text-transform: none; /* mantiene “for Latinoamérica” en minúsculas */
+}
+
+.location {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #D3D3D3;
+}
+
+#que-es {
+  background-color: #f8f9fa; /* gris claro de Bootstrap */
+  padding: 80px 0;
+}
+
+#que-es h2 {
+  text-align: center;
+  color: #212529;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* 🔹 Línea decorativa debajo del título */
+#que-es h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #31435b; /* azul Bootstrap */
+  margin: 15px auto 0;
+  border-radius: 4px;
+}
+
+/* 🔹 Texto descriptivo */
+#que-es p {
+  color: #495057;
+  font-size: 1.8rem;
+  line-height: 1.7;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#latam {
+  background-color: #212529; /* fondo oscuro */
+  color: #f8f9fa;            /* texto claro */
+  padding: 80px 0;
+}
+
+#latam h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #f8f9fa;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* 🔹 Línea decorativa */
+#latam h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #31435b; /* azul Bootstrap */
+  margin: 15px auto 0;
+  border-radius: 4px;
+}
+
+/* 🔹 Texto */
+#latam p {
+  color: #dee2e6; /* gris claro */
+  font-size: 1.8rem;
+  line-height: 1.7;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+h2, h3 {
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-title,
+.text-center.mb-5 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #212529;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+/* === EQUIPO === */
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  justify-items: center;
+  margin-bottom: 40px;
+  color: #212529;
+}
+
+.team-member {
+  text-align: center;
+  text-decoration: none;
+  color: #212529;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.team-member img {
+  width: 200px;          
+  height: 200px;          
+  object-fit: cover;
+  border-radius: 50%;     
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.team-member h3 {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  color: #464646;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  color: #464646;
+}
+
+footer {
+  background-color: #212529; /* mismo tono oscuro que la sección LATAM */
+  color: #f8f9fa;            /* texto claro */
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.95rem;
+  margin-top: 0;
+  border-top: 3px solid #000000; /* línea azul de acento */
+}
+
+/* 🔹 Texto del footer */
+footer p {
+  margin: 0;
+  color: #adb5bd; /* gris claro */
+}
+
+/* 🔹 Enlaces dentro del footer (si los agregas después) */
+footer a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #66b2ff;
+}
