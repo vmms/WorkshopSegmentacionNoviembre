@@ -29,12 +29,14 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #D3D3D3;
+nav a.active {
+    color: #6b7783;
+    font-weight:bold;
 }
 
-nav a.active {
-    color: #D3D3D3;
+nav a:hover {
+    color: #878787;
+    border-bottom: 1px solid;
 }
 
 /* 🔹 LOGO con imagen y texto en dos líneas */
@@ -118,24 +120,36 @@ section.preparacion h3 {
     color: #2c3e50;
 }
 
+section.preparacion h1 {
+    font-size: 3.2rem;          /* título principal */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
 section.preparacion h2 {
+    font-size: 2.6rem;        /* subtítulo */
+    font-weight: 600;
     border-bottom: 2px solid #545d63;
     padding-bottom: 5px;
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 section.preparacion h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;       /* subtítulo intermedio */
+    font-weight: 500;
     padding-bottom: 3px;
     border-bottom: 1px solid #545d63;
-    display: block;      /* bloque para que se respete el margin auto */
-    width: 50%;          /* ancho de la línea */
-    margin: 25px auto 15px auto; /* centra horizontalmente */
-    text-align: center;  /* centra el texto dentro del bloque */
+    display: block;
+    width: 50%;
+    margin: 25px auto 15px auto;
+    text-align: center;
 }
 
 section.preparacion p {
+    font-size: 1.1rem;          /* texto base */
     line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 section.preparacion ul, section.preparacion ol {
@@ -144,6 +158,7 @@ section.preparacion ul, section.preparacion ol {
 
 section.preparacion li {
     margin-bottom: 12px;
+    font-size: 1.1rem; 
 }
 
 section.preparacion a {
@@ -159,10 +174,15 @@ section.preparacion a:hover {
 
 section.preparacion img {
     display: block;
-    max-width: 80%; /* Reduce el tamaño de las imágenes */
+    max-width: 90%; /* Reduce el tamaño de las imágenes */
     margin: 15px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 0px;
+}
+
+section.preparacion img.shadow-img {
+  max-width: 83%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
 }
 
 footer {

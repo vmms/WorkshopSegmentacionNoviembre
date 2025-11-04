@@ -1,309 +1,384 @@
+:root {
+  --color-fondo: #1b1b1b;            /* Fondo principal (header) */
+  --color-texto: #ffffff;            /* Texto general claro */
+  --color-secundario: #d3d3d3;       /* Gris claro */
+  --color-detalle: #a9a9a9;          /* Gris medio */
+  --color-acento: #6b7783;           /* Gris azulado (activo) */
+  --color-hover: #878787;            /* Hover de enlaces */
+  --color-boton: #8d8d8d;            /* Fondo de botón */
+  --color-boton-hover: #000000;      /* Fondo hover del botón */
+  --color-boton-texto: #121212;      /* Texto del botón */
+
+  /* 🌫️ SECCIONES */
+  --color-intro-fondo: #1d1d20;      /* Fondo sección introducción */
+  --color-agenda-fondo: #55575d;     /* Fondo sección agenda */
+  --color-newsletter-fondo: #000000; /* Fondo newsletter */
+  --color-newsletter-card: #a9a9a9;  /* Tarjeta newsletter */
+
+  /* ⚙️ FOOTER */
+  --color-footer-fondo: #212529;
+  --color-footer-texto: #adb5bd;
+  --color-footer-borde: #000000;
+
+  /* 🧱 OTROS */
+  --color-venue-gradient: linear-gradient(90deg, #ffffff, #a9a9a9, #ffffff);
+  --color-barra-agenda: #ffffff;
+}
+
+/* 🔹 ESTILOS GENERALES */
 body {
-    margin: 0;
-    font-family: "Exo 2", sans-serif;
-    background: url('source/SLICER.gif') no-repeat center center/cover;
-    background-attachment: fixed;
-    color: white;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: "Exo 2", sans-serif;
+  background: url('source/SLICER.gif') no-repeat center center/cover;
+  background-attachment: fixed;
+  color: var(--color-texto);
+  overflow-x: hidden;
 }
 
+/* HEADER */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* 🔹 centra verticalmente todo dentro del header */
-    padding: 20px 40px;
-    background: rgb(27, 27, 27);
-    text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: var(--color-fondo);
+  text-transform: uppercase;
 }
 
-/* 🔹 NAV centrado verticalmente */
+/* 🔹 NAV */
 nav {
-    display: flex;
-    align-items: center; /* centra los enlaces dentro de nav */
+  display: flex;
+  align-items: center;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #D3D3D3;
+  color: var(--color-texto);
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
 }
 
 nav a.active {
-    color: #D3D3D3;
+  color: var(--color-acento);
+  font-weight: bold;
 }
 
-/* 🔹 LOGO con imagen y texto en dos líneas */
+nav a:hover {
+  color: var(--color-hover);
+  border-bottom: 1px solid;
+}
+
+/* 🔹 LOGO */
 .logo {
-    display: flex;
-    align-items: center; /* centra verticalmente el logo y el texto */
-    gap: 10px; /* espacio entre imagen y texto */
-    text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
 }
 
 .logo img {
-    width: 50px;  /* ajusta según el tamaño que prefieras */
-    height: auto;
+  width: 50px;
+  height: auto;
 }
 
 .logo-text h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #D3D3D3;
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--color-secundario);
 }
 
 .logo-text p {
-    margin: 0;
-    font-size: 0.8rem;
-    color: #A9A9A9;
-    text-transform: none; /* mantiene “for Latinoamérica” en minúsculas */
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-detalle);
+  text-transform: none;
 }
 
-/* 🔹 TEXTO DE UBICACIÓN */
+/* 🔹 UBICACIÓN */
 .location {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #D3D3D3;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-secundario);
 }
 
+/* PRESENTACIÓN */
 .pres {
-    width: 100%;
-    background: rgb(255, 255, 255);
-    padding: 60px 0;
-    color: white;
+  width: 100%;
+  background: #ffffff;
+  padding: 60px 0;
+  color: var(--color-texto);
 }
 
+/* HERO */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px; 
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .hero-image {
-    flex: 1;
+  flex: 1;
 }
 
 .hero-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 .content {
-    flex: 1;
-    text-align: right; /* 🔹 alinea todo a la derecha */
+  flex: 1;
+  text-align: right;
 }
 
 .content h2 {
-    font-size: 4rem;
-    margin: 0 0 20px;
-    color: #2d2d2d;
-;
+  font-size: 4rem;
+  margin: 0 0 20px;
+  color: #2d2d2d;
 }
 
 .event-info h3 {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-    color: #2d2d2d;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #2d2d2d;
 }
 
 .event-info p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 20px;
 }
 
+/* BOTONES */
 .button {
-    display: inline-block;
-    background-color: #8d8d8d;
-    color: #121212;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+  display: inline-block;
+  background-color: var(--color-boton);
+  color: var(--color-boton-texto);
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: rgb(0, 0, 0);
-    color: #bababa;
+  background-color: var(--color-boton-hover);
+  color: var(--color-secundario);
 }
 
+/* REDES SOCIALES */
 .social {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.social a {
-    display: block;
-    margin: 10px 0;
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
+.social a {
+  display: block;
+  margin: 10px 0;
+  color: var(--color-texto);
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+/* INTRODUCCIÓN */
 .intro {
-    background-color: #282828; /* 🔹 gris oscuro */
-    color: #ffffff;           /* 🔹 texto blanco */
-    padding: 80px 15%;
-    text-align: justify;
-    line-height: 1.8;
+  background-color: var(--color-intro-fondo);
+  color: var(--color-texto);
+  padding: 80px 15%;
+  text-align: justify;
+  line-height: 1.8;
 }
 
 .intro h2 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 30px;
-    color: #f1f1f1;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: var(--color-secundario);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .intro p {
-    font-size: 1.5rem;
-    color: #e0e0e0;
+  font-size: 1.5rem;
+  color: var(--color-detalle);
 }
 
-
+/* AGENDA */
 .agenda {
-    background: rgb(56, 59, 65);
-    color: #D3D3D3;
-    padding: 40px 20px;
-    text-align: center;
+  background: var(--color-agenda-fondo);
+  color: var(--color-texto);
+  padding: 40px 20px;
+  text-align: center;
 }
+
 .agenda h2 {
-    font-size: 3rem;
-    margin-bottom: 40px;
+  font-size: 3rem;
+  margin-bottom: 40px;
 }
+
 .agenda > p {
-    max-width: 1100px;
-    margin: 0 auto 28px auto;
-    line-height: 1.6;
-    color: #eaeaea;
+  max-width: 1100px;
+  margin: 0 auto 28px auto;
+  line-height: 1.6;
+  color: var(--color-secundario);
 }
+
 .agenda-item {
-    display: flex;
-    align-items: center;
-    margin: 20px auto;
-    max-width: 700px;
-    text-align: left;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 700px;
+  text-align: left;
+  gap: 16px;
 }
+
 .agenda-item .bar {
-    width: 5px;
-    height: 60px;
-    background: white;
-    flex-shrink: 0;
+  width: 5px;
+  height: 60px;
+  background: var(--color-barra-agenda);
+  flex-shrink: 0;
 }
+
 .agenda-item h3 {
-    margin: 0;
-    font-size: 1.4rem;
-    color: #ffffff;
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--color-texto);
 }
+
 .agenda-item h4 {
-    margin: 4px 0 6px 0;
-    font-size: 1.05rem;
-    color: #D3D3D3;
-    font-weight: 600;
+  margin: 4px 0 6px 0;
+  font-size: 1.05rem;
+  color: var(--color-secundario);
+  font-weight: 600;
 }
+
 .agenda-item p {
-    margin: 5px 0;
-    font-size: 0.95rem;
-    color: white;
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: var(--color-texto);
 }
 
-/* Franja de cambio de espacio */
-.venue-change{
-    display:flex;align-items:center;justify-content:center;gap:12px;
-    margin:32px auto;max-width:800px;padding:14px 18px;
-    background:linear-gradient(90deg,#ffffff,#A9A9A9,#ffffff);
-    color:#000;border-radius:12px;border:1px solid #fff;
-    font-weight:700;text-transform:uppercase;letter-spacing:.5px;
-    box-shadow:0 6px 20px rgba(0,0,0,.25)
+/* FRANJA DE CAMBIO DE ESPACIO */
+.venue-change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 32px auto;
+  max-width: 800px;
+  padding: 14px 18px;
+  background: var(--color-venue-gradient);
+  color: #000;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
-.venue-change i{font-size:1.2rem}
-.venue-change small{display:block;font-weight:400;text-transform:none;letter-spacing:0;opacity:.85}
 
+.venue-change i {
+  font-size: 1.2rem;
+}
+
+.venue-change small {
+  display: block;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: 0.85;
+}
+
+/* NEWSLETTER */
 .newsletter {
-    background: black;
-    padding: 40px 20px;
-    text-align: center;
+  background: var(--color-newsletter-fondo);
+  padding: 40px 20px;
+  text-align: center;
 }
+
 .newsletter-container {
-    background: #A9A9A9;
-    padding: 40px;
-    display: inline-block;
-    text-align: left;
-    border-radius: 10px;
+  background: var(--color-newsletter-card);
+  padding: 40px;
+  display: inline-block;
+  text-align: left;
+  border-radius: 10px;
 }
+
 .newsletter h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: white;
-    text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--color-texto);
+  text-transform: uppercase;
 }
+
 .newsletter p {
-    color: black;
-    font-size: 1rem;
+  color: #000;
+  font-size: 1rem;
 }
+
 .newsletter input {
-    padding: 10px;
-    border: 2px solid black;
-    margin-right: 10px;
-    border-radius: 6px;
+  padding: 10px;
+  border: 2px solid #000;
+  margin-right: 10px;
+  border-radius: 6px;
 }
+
 .newsletter button {
-    padding: 10px 20px;
-    border: 2px solid black;
-    background: white;
-    cursor: pointer;
-    border-radius: 6px;
-    font-weight: 700;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  background: var(--color-texto);
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 700;
 }
+
+/* BOTÓN DE CHAT */
 .chat-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #A9A9A9;
-    padding: 10px;
-    border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-detalle);
+  padding: 10px;
+  border-radius: 50%;
 }
 
-/* Responsive */
-@media (max-width: 768px){
-    .content h2{font-size: 3rem;}
-    .agenda h2{font-size: 2rem;}
-    .agenda-item{max-width: 95%;}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 3rem;
+  }
+  .agenda h2 {
+    font-size: 2rem;
+  }
+  .agenda-item {
+    max-width: 95%;
+  }
 }
 
+/* FOOTER */
 footer {
-  background-color: #212529; /* mismo tono oscuro que la sección LATAM */
-  color: #f8f9fa;            /* texto claro */
+  background-color: var(--color-footer-fondo);
+  color: var(--color-footer-texto);
   text-align: center;
   padding: 25px 0;
   font-size: 0.95rem;
   margin-top: 0;
-  border-top: 3px solid #000000; /* línea azul de acento */
+  border-top: 3px solid var(--color-footer-borde);
 }
 
-/* 🔹 Texto del footer */
 footer p {
   margin: 0;
-  color: #adb5bd; /* gris claro */
+  color: var(--color-footer-texto);
 }
 
-/* 🔹 Enlaces dentro del footer (si los agregas después) */
 footer a {
-  color: #000000;
+  color: var(--color-footer-borde);
   text-decoration: none;
   transition: color 0.3s ease;
 }

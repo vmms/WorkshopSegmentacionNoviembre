@@ -26,12 +26,14 @@ nav a {
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: #D3D3D3;
+nav a.active {
+    color: #6b7783;
+    font-weight:bold;
 }
 
-nav a.active {
-    color: #D3D3D3;
+nav a:hover {
+    color: #878787;
+    border-bottom: 1px solid;
 }
 
 /* 🔹 LOGO con imagen y texto en dos líneas */
