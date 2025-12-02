@@ -1,0 +1,376 @@
+:root {
+  --color-fondo: #1b1b1b;
+  --color-texto: #ffffff;
+  --color-secundario: #d3d3d3;
+  --color-detalle: #a9a9a9;
+  --color-acento: #6b7783;
+  --color-hover: #878787;
+  --color-boton: #8d8d8d;
+  --color-boton-hover: #000000;
+  --color-boton-texto: #121212;
+
+  /* 🌫️ SECCIONES */
+  --color-intro-fondo: #1d1d20;
+  --color-agenda-fondo: #55575d;
+  --color-newsletter-fondo: #000000;
+  --color-newsletter-card: #a9a9a9;
+
+  /* ⚙️ FOOTER */
+  --color-footer-fondo: #212529;
+  --color-footer-texto: #adb5bd;
+  --color-footer-borde: #000000;
+
+  --color-venue-gradient: linear-gradient(90deg, #ffffff, #a9a9a9, #ffffff);
+  --color-barra-agenda: #ffffff;
+  --header-height: 70px;
+}
+
+/* 🔹 ESTILOS GENERALES */
+body {
+  margin: 0;
+  font-family: "Exo 2", sans-serif;
+  background: url('source/SLICER.gif') no-repeat center center/cover;
+  background-attachment: fixed;
+  color: var(--color-texto);
+  overflow-x: hidden;
+}
+
+/* ====== HEADER GENERAL ====== */
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-fondo);
+  text-transform: uppercase;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+}
+
+/* --- Toggle --- */
+.navbar-toggler {
+  border: 0;
+  background: transparent;
+}
+.navbar-toggler .navbar-toggler-icon {
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-texto);
+  position: relative;
+}
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-texto);
+}
+.navbar-toggler .navbar-toggler-icon::before { top: -7px; }
+.navbar-toggler .navbar-toggler-icon::after { top: 7px; }
+
+/* --- Menú desplegable --- */
+header .collapse.navbar-collapse {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 10px;
+  right: 10px;
+  background: var(--color-fondo);
+  padding: 12px;
+  border-radius: 8px;
+  z-index: 950;
+  display: none;
+}
+header .collapse.navbar-collapse.show {
+  display: block;
+}
+.navbar-nav {
+  flex-direction: column;
+  gap: 8px;
+}
+.navbar-nav .nav-link {
+  display: block;
+  text-align: left;
+}
+
+/* ===============================
+   VISTA ESCRITORIO (>=992px)
+=============================== */
+@media (min-width: 992px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  header .collapse.navbar-collapse {
+    position: static;
+    display: flex !important;
+    background: none;
+    padding: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .col-4.order-2.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 50px;
+    height: auto;
+  }
+
+  .logo-text h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: var(--color-secundario);
+  }
+
+  .logo-text p {
+    font-size: 0.8rem;
+    margin: 0;
+    color: var(--color-detalle);
+  }
+
+  .col-4.order-3 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+/* ===============================
+   VISTA MÓVIL (<992px)
+=============================== */
+@media (max-width: 991.98px) {
+  .row.align-items-center {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .col-4.order-1 {
+    display: flex;
+    align-items: center;
+  }
+
+  .col-4.order-2.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+    text-align: right;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .logo-text h1 {
+    font-size: 1.1rem;
+  }
+
+  .logo-text p {
+    font-size: 0.7rem;
+  }
+}
+
+/* ===== GALERÍA / CARRUSEL ===== */
+.photos {
+  padding-bottom: 50px; 
+}
+
+.photos .main-photo {
+  margin-bottom: 50px !important;
+}
+
+.main-photo {
+  height: 650px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65);
+  margin-bottom: 80px;
+  z-index: 1;
+}
+
+/* Contenedor de carrusel */
+.thumbs-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    z-index: 10;
+}
+
+.thumb-arrow {
+    background: var(--color-hover);
+    color: white;
+    border: none;
+    font-size: 26px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+    transform: translateY(25px);
+}
+
+.thumbs-window {
+  width: 920px;
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+  z-index: 30;
+
+}
+
+.thumbs-strip {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;   /* MUY IMPORTANTE: crecen hacia arriba */
+    height: 100%;
+    transition: transform 0.25s ease;
+}
+
+/* ====================================
+   EFECTO DOCK REAL TIPO macOS
+==================================== */
+.thumb {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.1s ease-out;
+    position: relative;
+}
+
+.active-thumb {
+    border-color: #fff;
+}
+
+.thumb.dock-active {
+  z-index: 5;
+}
+
+/* ====================================
+   RESTO DE SECCIONES (sin cambios)
+==================================== */
+
+/* FRANJA CAMBIO ESPACIO */
+.venue-change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 32px auto;
+  max-width: 800px;
+  padding: 14px 18px;
+  background: var(--color-venue-gradient);
+  color: #000;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.venue-change i {
+  font-size: 1.2rem;
+}
+
+.venue-change small {
+  display: block;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+/* NEWSLETTER */
+.newsletter { background: var(--color-newsletter-fondo); padding: 40px 20px; text-align: center; }
+.newsletter-container { background: var(--color-newsletter-card); padding: 40px; border-radius: 10px; }
+
+/* FOOTER */
+footer {
+  background-color: var(--color-footer-fondo);
+  color: var(--color-footer-texto);
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.95rem;
+  margin-top: 0;
+  border-top: 3px solid var(--color-footer-borde);
+}
+
+footer p {
+  margin: 0;
+  color: var(--color-footer-texto);
+}
+
+footer a {
+  color: var(--color-footer-borde);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .partners {
+  display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  align-items: flex-start;   /* alinea logos al inicio de la fila */
+  flex-wrap: wrap;           /* varias filas en móvil */
+  gap: 30px;
+  margin-bottom: 20px;       /* separación con el copyright */
+}
+
+/* 🔹 Cada partner */
+footer .partners a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+/* 🔹 Logos con tamaño uniforme (cuadrado) */
+footer .partners a img {
+  width: 120px;             /* mismo ancho para todos */
+  height: 120px;            /* mismo alto para todos */
+  object-fit: contain;      /* mantiene proporción dentro del cuadrado */
+  background-color: #ffffff; /* fondo blanco */
+  border-radius: 5px;        /* bordes redondeados */
+  padding: 5px;              /* espacio interno */
+  transition: transform 0.3s ease;
+}
+
+/* 🔹 Texto debajo del logo */
+footer .partners a span {
+  font-size: 0.8rem;
+  color: #ffffff;            /* texto blanco */
+  text-align: center;
+  margin-top: 5px;           /* separación del logo */
+  max-width: 120px;          /* igual al ancho del logo */
+  word-wrap: break-word;     /* salto de línea si es largo */
+  line-height: 1.2em;
+}
+
+/* 🔹 Hover sobre el logo */
+footer .partners a:hover img {
+  transform: scale(1.05);
+}

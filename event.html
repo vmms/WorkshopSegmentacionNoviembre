@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller - 3D Slicer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/event.css">
+</head>
+<body>
+
+<header>
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <!-- 🟩 Columna Izquierda: Menú -->
+      <div class="col-4 order-1">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="ponentes.html" class="nav-link">Ponentes</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">Equipo de Latinoamérica</a></li>
+            <li class="nav-item"><a href="instal.html" class="nav-link">Preparación</a></li>
+            <li class="nav-item"><a href="event.html" class="nav-link active">Fotos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 🟦 Columna Centro: Logo -->
+      <div class="col-4 order-2 logo">
+        <img src="https://www.slicer.org/assets/img/3D-Slicer-Mark.svg" alt="3D Slicer Logo">
+        <div class="logo-text">
+          <h1>3D SLICER</h1>
+          <p>for Latinoamérica</p>
+        </div>
+      </div>
+
+      <!-- 🟥 Columna Derecha: Estado -->
+      <div class="col-4 order-3 text-end">
+        <p class="location">Estado de México, México, 2025</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="photos container text-center mt-4">
+
+  <!-- Imagen principal -->
+  <img id="mainPhoto" class="main-photo img-fluid mb-3" src="img/event/IMG_01.png">
+
+  <!-- Contenedor del carrusel -->
+  <div class="thumbs-wrapper">
+
+    <!-- Flecha izquierda -->
+    <button id="btnLeft" class="thumb-arrow">&#10094;</button>
+
+    <!-- Ventana que solo deja ver 5 thumbnails -->
+    <div class="thumbs-window">
+      <div class="thumbs-strip">
+        
+        <!-- 👉 Aquí puedes agregar tantas imágenes como quieras -->
+        <img class="thumb active-thumb" data-photo="img/event/IMG_01.png" src="img/event/IMG_01.png">
+        <img class="thumb" data-photo="img/event/IMG_02.png" src="img/event/IMG_02.png">
+        <img class="thumb" data-photo="img/event/IMG_03.png" src="img/event/IMG_03.png">
+        <img class="thumb" data-photo="img/event/IMG_04.png" src="img/event/IMG_04.png">
+        <img class="thumb" data-photo="img/event/IMG_05.png" src="img/event/IMG_05.png">
+        <img class="thumb" data-photo="img/event/IMG_06.png" src="img/event/IMG_06.png">
+        <img class="thumb" data-photo="img/event/IMG_07.png" src="img/event/IMG_07.png">
+        <img class="thumb" data-photo="img/event/IMG_08.png" src="img/event/IMG_08.png">
+        <img class="thumb" data-photo="img/event/IMG_09.png" src="img/event/IMG_09.png">
+        <img class="thumb" data-photo="img/event/IMG_10.png" src="img/event/IMG_10.png">
+        <img class="thumb" data-photo="img/event/IMG_11.png" src="img/event/IMG_11.png">
+        <img class="thumb" data-photo="img/event/IMG_13.png" src="img/event/IMG_13.png">
+        <img class="thumb" data-photo="img/event/IMG_14.png" src="img/event/IMG_14.png">
+        <img class="thumb" data-photo="img/event/IMG_15.png" src="img/event/IMG_15.png">
+        <img class="thumb" data-photo="img/event/IMG_16.png" src="img/event/IMG_16.png">
+        <img class="thumb" data-photo="img/event/IMG_17.png" src="img/event/IMG_17.png">
+        <img class="thumb" data-photo="img/event/IMG_18.png" src="img/event/IMG_18.png">
+        <img class="thumb" data-photo="img/event/IMG_19.png" src="img/event/IMG_19.png">
+        <img class="thumb" data-photo="img/event/IMG_20.png" src="img/event/IMG_20.png">
+        <img class="thumb" data-photo="img/event/IMG_21.png" src="img/event/IMG_21.png">
+      </div>
+    </div>
+    <!-- Flecha4d520IMG_20cha -->
+    <button id="btnRight" class="thumb-arrow">&#10095;</button>
+  </div>
+
+</section>
+
+
+<footer>
+  <div class="footer-content">
+    <!-- 🔹 Logos de convenios con nombre -->
+    <div class="partners">
+      <a href="https://www.uaemex.mx/" target="_blank">
+        <img src="img/assets/partners/uaem.svg" alt="UAEM">
+        <span>Universidad Autónoma del Estado de México</span>
+      </a>
+      <a href="https://www.ingenieria.uaemex.mx/" target="_blank">
+        <img src="img/assets/partners/fi.jpeg" alt="Facultad de Ingeniería">
+        <span>Facultad de Ingeniería</span>
+      </a>
+      <a href="https://hms.harvard.edu/" target="_blank">
+        <img src="img/assets/partners/hms.png" alt="Harvard Medical School">
+        <span>Harvard Medical School</span>
+      </a>
+      <a href="#" target="_blank">
+        <img src="img/assets/partners/CTBC.jpeg" alt="Universidad Militar Nueva Granada">
+        <span>Doctorado en Ciencias, Tecnología Biomédica y Control</span>
+      </a>
+      <a href="https://www.umng.edu.co/" target="_blank">
+        <img src="img/assets/partners/umg.png" alt="Universidad Militar Nueva Granada">
+        <span>Universidad Militar Nueva Granada</span>
+      </a>
+    </div>
+
+    <!-- 🔹 Copyright al final -->
+    <p>© 2025 Slicer Latinoamérica — Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/photos.js"></script>
+</body>
+</html>
